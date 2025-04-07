@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .item {
+            display: none; /* Hide all items by default */
+        }
+        .item.visible {
+            display: table-row; /* Show item when it has the 'visible' class */
+        }
+        .button {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none; /* No border */
+            padding: 10px 15px; /* Padding */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+            margin-top: 10px; /* Margin for spacing */
+            display: block; /* Display as block */
+        }
+        .button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Biology</h1>
+        <nav>
+            <ul>
+                <li><a href="#items" style="color: white;">BIOLOGY ITEMS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="items">
+            <h2>Biology Items</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item Number</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="item visible">
+                        <td>1</td>
+                        <td><a href="bio copy 1.html"><button class="custom-button">ITEM 1</button></a></td>
+                    </tr>
+                    <tr class="item visible">
+                        <td>2</td>
+                        <td><a href="bio copy 2.html"><button class="custom-button">ITEM 2</button></a></td>
+                    </tr>
+                    <tr class="item visible">
+                        <td>3</td>
+                        <td><a href="bio copy 3.html"><button class="custom-button">ITEM 3</button></a></td>
+                    </tr>
+                    <tr class="item visible">
+                        <td>4</td>
+                        <td><a href="bio copy 4.html"><button class="custom-button">ITEM 4</button></a></td>
+                    </tr>
+                    <tr class="item visible">
+                        <td>5</td>
+                        <td><a href="bio copy 5.html"><button class="custom-button">ITEM 5</button></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>6</td>
+                        <td><a href="bio copy 6.html"><button class="custom-button">ITEM 6</button></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>7</td>
+                        <td><a href="bio copy_7.html"><button class="custom-button">ITEM 7</button></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>8</td>
+                        <td><a href="bio copy 8.html"><button class="custom-button">ITEM 8</button></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>9</td>
+                        <td><a href="bio copy_9.html"><button class="custom-button">ITEM 9</button></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>10</td>
+                        <td><a href="bio copy 10.html"><button class="custom-button">ITEM 10</button></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>11</td>
+                        <td><a href="bio copy 11.html"><button class="custom-button">ITEM 11</button></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>12</td>
+                        <td><a href="bio copy 12.html"><button class="custom-button">ITEM 12</button></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>13</td>
+                        <td><a href="bio copy 13.html"><button class="custom-button">ITEM 13</button></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>14</td>
+                        <td><a href="bio copy 14.html"><button class="custom-button">ITEM 14</button></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="showMore" class="button">Show More</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Biology Page. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const items = document.querySelectorAll('.item');
+        const showMoreButton = document.getElementById('showMore');
+        let visibleCount = 5; // Start by showing 5 items
+
+        // Initially show the first 5 items
+        items.forEach((item, index) => {
+            if (index < visibleCount) {
+                item.classList.add('visible');
+            }
+        });
+
+        // Add event listener for the "Show More" button
+        showMoreButton.addEventListener('click', () => {
+            // Show the next 5 items
+            let newVisibleCount = visibleCount + 5;
+            items.forEach((item, index) => {
+                if (index < newVisibleCount) {
+                    item.classList.add('visible');
+                }
+            });
+
+            visibleCount = newVisibleCount; // Update the count of visible items
+
+            // Hide the button if all items are visible
+            if (visibleCount >= items.length) {
+                showMoreButton.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

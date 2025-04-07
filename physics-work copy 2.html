@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>PHYSICS ITEM TWO</title>
+    <style>
+        .responsive-image {
+            display: none; /* Hide the image by default */
+            max-width: 100%; /* Make image responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+        #showImageButton {
+            display: none; /* Hide the button by default */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>PHYSICS ITEM TWO</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="content">
+        <iframe id="formIframe" src="https://docs.google.com/forms/d/e/1FAIpQLSeVF3dJSNrDGElA7y8q2KZoviRoMrK73tlGnPyL0ej0ALgw4g/viewform?embedded=true" width="500" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <main>
+       
+            <button id="showImageButton">SHOW CONTENT</button>
+            <img src="phy/p (1).jpeg" alt="Physics Item Two" class="responsive-image" id="physicsImage">
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Your Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Monitor the iframe for form submission
+        const iframe = document.getElementById('formIframe');
+        const showImageButton = document.getElementById('showImageButton');
+
+        // Simulate form submission detection
+        iframe.addEventListener('load', function() {
+            // Check if the form has been submitted (this is a simulation)
+            // In a real-world scenario, you might need server-side integration
+            setTimeout(() => {
+                // Show the button after form submission
+                showImageButton.style.display = 'block';
+            }, 2000); // Simulate a delay for form submission
+        });
+
+        // Show the image when the button is clicked
+        showImageButton.addEventListener('click', function() {
+            document.getElementById('physicsImage').style.display = 'block';
+        });
+    </script>
+</body>
