@@ -3,47 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- Ensure this path is correct -->
     <title>IMPACT</title>
+    <style>
+        /* Global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #d32f2f; /* Red background */
+            color: white;
+            padding: 20px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        nav .dropdown {
+            position: relative;
+        }
+
+        nav .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fbc02d; /* Yellow */
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        nav .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        nav .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            display: block;
+        }
+
+        nav .dropdown-content a:hover {
+            background-color: #ffeb3b;
+        }
+
+        /* Main content styles */
+        main {
+            padding: 40px 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .main-content {
+            flex: 3;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-content h2 {
+            font-size: 2rem;
+            color: #d32f2f;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .main-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Button container */
+        .button-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #fbc02d; /* Yellow */
+            color: #333;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ffeb3b;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            font-size: 1.5rem;
+            color: #d32f2f;
+            margin-bottom: 15px;
+        }
+
+        .sidebar p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #d32f2f; /* Red */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Make iframe responsive */
+        .iframe-container {
+            position: relative;
+            padding-bottom: 100%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
 </head>
 <body>
     <header>
-        <h1>IMACT</h1>
-        <nav>
-            <ul>
-                
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Menu</a>
-                    <div class="dropdown-content">
-                        <a href="#">Submenu 1</a>
-                        <a href="#">Submenu 2</a>
-                        <a href="#">Submenu 3</a>
-                    </div>
-                </li>
-            
-            </ul>
-        </nav>
+        <div class="header-content">
+            <h1>IMPACT</h1>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Menu</a>
+                        <div class="dropdown-content">
+                            <a href="index.html">HOME</a>
+                            <a href="subjects.html">subjects</a>
+                            <a href="£">Reload</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <div class="container">
-        <div class="main-content">
-            <h2>Welcome to Impact</h2>
-            <img src="IMG/logo.jfif" alt="">
-            <p>Welcome to Impact!
-                Your free hub for science past papers.
-                Study smart, practice often, and level up your skills.
-                Let’s get learning! </p>
-    
+    <main>
+        <div class="container">
+            <div class="main-content">
+                <h2>Welcome to Impact</h2>
+                <img src="IMG/logo.jfif" alt="Impact Logo">
+                <p>Welcome to Impact! Your <b>free hub for science past papers</b>.
+                    <br> Study smart, practice often, and level up your skills. Let’s get learning!</p>
+            </div>
+            <br>
+            <div class="button-container">
+                <a href="subjects.html" class="button">Start</a>
+            </div>
+
         </div>
-        <div class="button-container">
-            <a href="subjects.html" class="button">start</a>
+
+        <!-- Embed Google Form in iframe, responsive for mobile -->
+        <div class="iframe-container">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScKTFdIlWXNg6baODpJ9EirPrYyrfzuqqPUgRohdXCrG_gqHQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </div>
-        <div class="sidebar">
-            <h3>Sidebar</h3>
-            <p>This is a sidebar where you can include additional information, links, or advertisements.</p>
-        </div>
-    </div>
+
+    </main>
     <footer>
-        <p>&copy; 2025 My Website</p>
+        <p>&copy; CREATED BY SSALI AND VICTORIA</p>
     </footer>
 </body>
 </html>
