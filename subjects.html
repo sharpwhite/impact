@@ -5,21 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Select Subject</title>
+    <style>
+        /* Global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa; /* Lighter background color */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #ff7043; /* Lighter Red */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none; /* Remove underline */
+        }
+
+        /* Image slider styles */
+        .image-slider {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .slider-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Heading styles */
+        h1 {
+            text-align: center;
+            color: #ff7043; /* Lighter Red */
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        /* Button container */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Button styling */
+        .subject-button {
+            background-color: #d32f2f; /* Red background */
+            color: #fbc02d; /* Yellow text */
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 50px; /* Makes buttons round */
+            border: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none; /* Remove underline */
+        }
+
+        .subject-button:hover {
+            background-color: #fbc02d; /* Yellow background on hover */
+            color: #d32f2f; /* Red text on hover */
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .subject-button {
+                width: 80%; /* Make buttons full-width on small screens */
+                margin-bottom: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <a href="index.html">Home</a>
     </nav>
-    <div class="image-slider">
 
+    <div class="image-slider">
         <img src="IMG/sub (2).jpg" alt="Image 2" class="slider-image">
- 
     </div>
+
     <h1>Select a Subject</h1>
+
     <div class="button-container">
         <a href="math.html" class="subject-button">Mathematics</a>
         <a href="physics.html" class="subject-button">Physics</a>
-        <a href="chemistry.html" class="subject-button">chemistry</a>
+        <a href="chemistry.html" class="subject-button">Chemistry</a>
         <a href="biology.html" class="subject-button">Biology</a>
     </div>
 </body>
